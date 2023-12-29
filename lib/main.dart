@@ -34,13 +34,16 @@ class _MyHomePageState extends State<MyHomePage> with SingleTickerProviderStateM
   void initState() {
     super.initState();
     _controller = AnimationController(
-      duration: const Duration(seconds: 2),
+      duration: const Duration(seconds: 100),
       vsync: this,
     );
+
     _animation = Tween<double>(
       begin: 0,
-      end: 2 * pi,
+      end: 100 * pi,
     ).animate(_controller);
+
+    _controller.forward(); // Start the animation
   }
 
   @override
@@ -57,17 +60,13 @@ class _MyHomePageState extends State<MyHomePage> with SingleTickerProviderStateM
           animation: _controller,
           builder: (context, child) {
             return Transform(
-              // Add return statement here
               alignment: Alignment.center,
-              transform: Matrix4.identity()
-                ..rotateZ(
-                  _animation.value,
-                ),
+              transform: Matrix4.identity()..rotateY(_animation.value), // Rotate around Z-axis
               child: Container(
                 width: 100,
                 height: 100,
                 decoration: BoxDecoration(
-                  color: Colors.blue,
+                  color: Colors.red,
                   borderRadius: BorderRadius.circular(10),
                   boxShadow: [
                     BoxShadow(
