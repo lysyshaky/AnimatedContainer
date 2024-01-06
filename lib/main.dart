@@ -1,3 +1,4 @@
+import 'package:animation_1/animations%20/3d_animation.dart';
 import 'package:animation_1/animations%20/cirlce_animation.dart';
 import 'package:flutter/material.dart';
 
@@ -22,6 +23,7 @@ class MyApp extends StatelessWidget {
       routes: {
         '/containerAnimation': (context) => const ContainerAnimation(),
         '/circleAnimation': (context) => const CircleAnimation(),
+        '/3dAnimation': (context) => const Animation3D(),
       },
     );
   }

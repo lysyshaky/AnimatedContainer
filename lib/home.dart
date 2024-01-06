@@ -1,3 +1,4 @@
+import 'package:animation_1/animations%20/3d_animation.dart';
 import 'package:animation_1/animations%20/cirlce_animation.dart';
 import 'package:flutter/material.dart';
 
@@ -35,6 +36,14 @@ class _HomePageState extends State<HomePage> {
                     .push(MaterialPageRoute(builder: (context) => const CircleAnimation()));
               },
               child: const Text('Circle Animation'),
+            ),
+            const SizedBox(height: 20),
+            ElevatedButton(
+              onPressed: () {
+                Navigator.of(context)
+                    .push(MaterialPageRoute(builder: (context) => const Animation3D()));
+              },
+              child: const Text('3D Animation'),
             ),
           ],
         ),
