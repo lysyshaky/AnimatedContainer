@@ -3,6 +3,9 @@ import 'package:animation_1/animations%20/cirlce_animation.dart';
 import 'package:flutter/material.dart';
 
 import 'animations /container_animation.dart';
+import 'animations /hero_image_animation.dart';
+import 'animations /tween_animation.dart';
+import 'animations /zoom_image_animation.dart';
 import 'home.dart';
 
 void main() {
@@ -24,6 +27,9 @@ class MyApp extends StatelessWidget {
         '/containerAnimation': (context) => const ContainerAnimation(),
         '/circleAnimation': (context) => const CircleAnimation(),
         '/3dAnimation': (context) => const Animation3D(),
+        '/heroImageAnimation': (context) => const HeroImageAnimation(),
+        '/zoomImageAnimation': (context) => const ZoomAnimation(),
+        '/tweenAnimation': (context) => const TweenAnimation(),
       },
     );
   }

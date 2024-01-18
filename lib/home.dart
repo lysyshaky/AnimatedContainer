@@ -1,5 +1,8 @@
 import 'package:animation_1/animations%20/3d_animation.dart';
 import 'package:animation_1/animations%20/cirlce_animation.dart';
+import 'package:animation_1/animations%20/hero_image_animation.dart';
+import 'package:animation_1/animations%20/tween_animation.dart';
+import 'package:animation_1/animations%20/zoom_image_animation.dart';
 import 'package:flutter/material.dart';
 
 import 'animations /container_animation.dart';
@@ -44,6 +47,30 @@ class _HomePageState extends State<HomePage> {
                     .push(MaterialPageRoute(builder: (context) => const Animation3D()));
               },
               child: const Text('3D Animation'),
+            ),
+            const SizedBox(height: 20),
+            ElevatedButton(
+              onPressed: () {
+                Navigator.of(context)
+                    .push(MaterialPageRoute(builder: (context) => const HeroImageAnimation()));
+              },
+              child: const Text('Image Hero Animation'),
+            ),
+            const SizedBox(height: 20),
+            ElevatedButton(
+              onPressed: () {
+                Navigator.of(context)
+                    .push(MaterialPageRoute(builder: (context) => const ZoomAnimation()));
+              },
+              child: const Text('Zoom Animation'),
+            ),
+            const SizedBox(height: 20),
+            ElevatedButton(
+              onPressed: () {
+                Navigator.of(context)
+                    .push(MaterialPageRoute(builder: (context) => const TweenAnimation()));
+              },
+              child: const Text('Circle Color Animation'),
             ),
           ],
         ),
