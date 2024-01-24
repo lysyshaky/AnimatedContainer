@@ -39,12 +39,12 @@ class _TweenAnimationState extends State<TweenAnimation> {
               child: Container(
                 width: MediaQuery.of(context).size.width,
                 height: MediaQuery.of(context).size.width,
-                color: Colors.red,
+                color: Colors.white,
                 child: const Center(
                   child: Text(
                     'Tween Animation',
                     style: TextStyle(
-                      color: Colors.white,
+                      color: Colors.green,
                       fontSize: 20,
                     ),
                   ),

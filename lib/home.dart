@@ -1,10 +1,13 @@
 import 'package:animation_1/animations%20/3d_animation.dart';
 import 'package:animation_1/animations%20/cirlce_animation.dart';
+import 'package:animation_1/animations%20/custom_shape_animation.dart';
 import 'package:animation_1/animations%20/hero_image_animation.dart';
+import 'package:animation_1/animations%20/prompt_animation.dart';
 import 'package:animation_1/animations%20/tween_animation.dart';
 import 'package:animation_1/animations%20/zoom_image_animation.dart';
 import 'package:flutter/material.dart';
 
+import 'animations /3d_nav_animation.dart';
 import 'animations /container_animation.dart';
 
 class HomePage extends StatefulWidget {
@@ -71,6 +74,29 @@ class _HomePageState extends State<HomePage> {
                     .push(MaterialPageRoute(builder: (context) => const TweenAnimation()));
               },
               child: const Text('Circle Color Animation'),
+            ),
+            const SizedBox(height: 20),
+            ElevatedButton(
+              onPressed: () {
+                Navigator.of(context)
+                    .push(MaterialPageRoute(builder: (context) => const CustomShapeAnimation()));
+              },
+              child: const Text('Circle Color Animation'),
+            ),
+            const SizedBox(height: 20),
+            ElevatedButton(
+              onPressed: () {
+                Navigator.of(context)
+                    .push(MaterialPageRoute(builder: (context) => const Drawer3D()));
+              },
+              child: const Text('3D Drawer Animation'),
+            ),
+            ElevatedButton(
+              onPressed: () {
+                Navigator.of(context)
+                    .push(MaterialPageRoute(builder: (context) => const AnimationCheck()));
+              },
+              child: const Text('Prompt Animation'),
             ),
           ],
         ),
